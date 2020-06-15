@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #d31027, #ea384d);
+}
+
+.login-form {
+  width: 360px;
+  background: #dff9fb;
+  height: 580px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form h1 {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ea2027;
+}
+
+.txtb {
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input {
+  font-family: "Comfortaa", cursive;
+  font-size: 17px;
+  color: #1b1464;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+  font-weight: 900;
+}
+
+.txtb span::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  font-family: "Comfortaa", cursive;
+  top: 50%;
+  left: 5px;
+  color: #1b1464;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.txtb span::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg, #e65c00, #f9d423);
+  transition: 0.5s;
+  top: 100%;
+  left: 0;
+}
+
+.focus + span::before {
+  top: -5px;
+}
+.focus + span::after {
+  width: 100%;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-size: 200%;
+  background: #f1c40f;
+  font-family: "Roboto Slab", serif;
+  font-weight: 900;
+  font-size: 15px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login-btn:hover {
+  box-shadow: 0px 1px 13px #1b1464;
+}
+
+.mid-text {
+  font-family: "Comfortaa", cursive;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.mid-text a,
+.bottom-text a {
+  text-decoration: none;
+  color: #0652dd;
+}
+
+.mid-text a:hover,
+.bottom-text a:hover {
+  text-decoration: underline;
+}
+
+.bottom-text {
+  font-family: "Comfortaa", cursive;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+
+
+@media screen and (max-width: 360px) {
+  .login-form {
+    width: 340px;
+    height: 580px;
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  .login-form {
+    width: 310px;
+    height: 535px;
+  }
+  .code-by {
+    margin-bottom: 1px; 
+    font-size: 11px;
+    
+  }
+}
